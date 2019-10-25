@@ -15,15 +15,17 @@ Based on our experiments, The performance sequence is ACS > Rank-based ACO > Max
 
 Improved points:
 1. Add Function to output optimization result for acotsp in CSV format which is easy for later anaylse.
-2. Add Improved Function for candidators selection mechanism of Levy Flight;
-3. Add Improved Function for pheromone update logic based on the contribution of each arc in the solution.
+2. Add Improved Function for Epsilon Greedy policy to ACO;
+3. Add Improved Function for candidators selection mechanism of Levy Flight;
+4. Add Improved Function for pheromone update logic based on the contribution of each arc in the solution.
 
 Usage:
 1. Basic parameters is similar with original acotsp, please run acotsp --help for details.
-2. For Levy Flight ACO, parameters  -L x:y is used.
-    x means Levy Flight Threshold which value between 0 to 1, suggest value is 0.8-0.9; 
-	y means Levy Flight Alter Ratio great than 0, suggest value is 4;
-	please run acotsp --help for details with Levy Flight;
+2. For Greedy Levy Flight ACO, parameters  -G x:y:z is used.
+        x means Epsilon Greedy Threshold which value between 0 to 1, suggest value is 0.7; 
+        y means Levy Flight Threshold which value between 0 to 1, suggest value is 0.8-0.9; 
+	z means Levy Flight Alter Ratio great than 0, suggest value is 4;
+	please run acotsp --help for details with Epsilon Greedy Levy Flight;
 3. For Contribution-based ACO, parameter -C x is used.
     x means Contribution effect alter ratio, suggest value is 4.
 4. Usage for acotsp please refer the demo shell file in shell directory.
